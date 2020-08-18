@@ -1,10 +1,14 @@
 #chat-button{
-    background-color:#adf; 
+    background-color:#4472C4;
     border:0px; 
     border-radius:50px; 
     bottom:20px; 
+    color:#eee;
     height:60px; 
     right:20px; 
     position:fixed; 
     width:60px;
+    &:focus {
+        outline:0;
+    }
 }
