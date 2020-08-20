@@ -21,6 +21,9 @@ export default class Chat extends React.Component {
     }
 
     onClick () {
-        this.props.onClickSend($("#input").val());
+        if($("#input").val() != ''){
+            this.props.onClickSend($("#input").val());
+            $("#input").val('');
+        }
     }
 }

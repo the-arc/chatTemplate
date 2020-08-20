@@ -15,18 +15,25 @@ let apiConfig = {
 }; 
 
 /*
- *こちらからチャットサーバとのAPIを記述します
+ *こちらにボットが最初に表示するコメントを入力してください。
  */
-function submit(){
-    console.log(apiConfig.host);
-    return "<p>title<p><p>detail<p>";
+function firstBotComment(){
+    return firstComment = "質問を入力してください！";
 }
 
+/*
+ * こちらからチャットサーバとの連携APIを記述します
+ * param:  質問テキスト
+ * return: bot返却用テキスト
+ */
+function submit(text){
+    return text+"の回答です";
+}
 
 
 class config{
     firstComment(){
-        return "なんでも聞いてください";
+        return firstBotComment();
     }
     submit(text){
         return submit(text);

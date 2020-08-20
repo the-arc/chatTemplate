@@ -12,7 +12,10 @@ class Layout extends React.Component {
         this.state = { 
             showChat: false, //chat画面の表示の処理
             comment: config.firstComment(), //start時のbotコメント
-            answer: "" //回答取得時のテキスト
+            qna: {
+                question:[],
+                answer:[]
+            }
         }
     }
     render(){
@@ -23,7 +26,7 @@ class Layout extends React.Component {
                       onClickSend={this.onClickSend.bind(this)} 
                       data={this.state.showChat} 
                       firstComment={this.state.comment}
-                      answer={this.state.answer}
+                      qna={this.state.qna}
                 />
             </div>
         );
@@ -33,8 +36,12 @@ class Layout extends React.Component {
     showChat (data) { 
         this.setState({ showChat: data });
     }
+    //テキスト送信ボタンが押された場合の処理
     onClickSend(data){
-        this.setState({ answer: config.submit(data) });
+        let newQna = this.state.qna;
+        newQna.question.push(data);
+        newQna.answer.push(config.submit(data));
+        this.setState({ qna: newQna });
     }
 }
 

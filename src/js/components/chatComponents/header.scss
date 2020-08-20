@@ -1,11 +1,13 @@
 #chatHeader{
     background-color:#4472C4;
     border-radius:6px 6px 0px 0px;
+    padding:2px 10px;
     text-align:right;
     button{
         background-color:rgba(0,0,0,0);
         border:0px;
         color:#ddd;
+        padding:0px;
         &:focus {
             outline:0;
         }

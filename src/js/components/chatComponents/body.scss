@@ -5,9 +5,10 @@
 }
 
 #chatBody{
-    background-color:#84b2f4;
-    height:314px;
+    background-color:#84b2f4; 
+    height:313px;
     padding:7px;
+    overflow:scroll;
     .answer{
         background-color:#ccc;
         border-radius:50px 50px 50px 0px;

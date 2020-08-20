@@ -15,7 +15,7 @@ export default class Chat extends React.Component {
             <div id="chat" style={{ display: this.props.data ? '' : 'none' }}>
                 <ChatHeader onClick={this.onClick.bind(this)}/>
                 <ChatBody firstComment={this.props.firstComment}
-                          answer={this.props.answer}/>
+                          qna={this.props.qna}/>
                 <ChatSend onClickSend={this.onClickSend.bind(this)}/>
             </div>
         );
@@ -27,6 +27,3 @@ export default class Chat extends React.Component {
         this.props.onClickSend(data);
     }
 }
-/*
-
-*/
