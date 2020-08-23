@@ -40,7 +40,8 @@ class Layout extends React.Component {
     onClickSend(data){
         let newQna = this.state.qna;
         newQna.question.push(data);
-        newQna.answer.push(config.submit(data));
+        newQna.answer.push(null);
+        newQna.answer.splice(newQna.answer.length-1, 0, config.submit(data));
         this.setState({ qna: newQna });
     }
 }

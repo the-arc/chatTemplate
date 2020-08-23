@@ -5,6 +5,7 @@ import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import './body.scss';
+import './loading.scss';
 
 $(function(){
     
@@ -15,7 +16,13 @@ export default class Chat extends React.Component {
         let qa = [];
         for(let i in this.props.qna.question){
             qa.push(<div class="question">{this.props.qna.question[i]}</div>);
-            qa.push(<div class="answer">{this.props.qna.answer[i]}</div>);
+            console.log(this.props.qna.answer[i]);
+            qa.push(<div class="answer">
+                {this.props.qna.answer[i] == null ? 
+                    (<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>) : 
+                    (<span>{this.props.qna.answer[i]}</span>)
+                } 
+            </div>);
         }
         return (
             <div id="chatBody">
