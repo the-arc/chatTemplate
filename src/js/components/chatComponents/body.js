@@ -23,6 +23,7 @@ export default class Chat extends React.Component {
                     (<span>{this.props.qna.answer[i]}</span>)
                 } 
             </div>);
+            this.scrollDown();
         }
         return (
             <div id="chatBody">
@@ -30,5 +31,9 @@ export default class Chat extends React.Component {
                 {qa}
             </div>
         );
+    }
+    scrollDown(){
+        var obj = document.getElementById('chatBody');
+        obj.scrollTop = obj.scrollHeight;
     }
 }
