@@ -11,4 +11,11 @@
     &:focus {
         outline:0;
     }
+    transition: .3s;
+    &:hover {
+        cursor: pointer;
+        cursor: hand;
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+      }
 }
