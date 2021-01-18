@@ -1,0 +1,23 @@
+@mixin comments() {
+    display: table;
+    margin-bottom:5px;
+    padding:3px 8px;
+}
+
+#chatBody{
+    background-color:#84b2f4; 
+    height:313px;
+    padding:7px;
+    overflow:scroll;
+    .answer{
+        background-color:#ccc;
+        border-radius:50px 50px 50px 0px;
+        @include comments();
+    }
+    .question{
+        background-color:#add6ff;
+        border-radius:50px 50px 0px 50px;
+        margin:0px 0px 0px auto;
+        @include comments();
+    }
+}
