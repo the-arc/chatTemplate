@@ -12,7 +12,9 @@ $(function(){
 export default class Chat extends React.Component {
     render(){
         return (
-            <div id="chat" style={{ display: this.props.data ? '' : 'none' }}>
+            <div id="chat" style={{
+                display: this.props.data ? '' : 'none' 
+            }}>
                 <ChatHeader onClick={this.onClick.bind(this)}/>
                 <ChatBody firstComment={this.props.firstComment}
                           qna={this.props.qna}/>

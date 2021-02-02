@@ -15,7 +15,9 @@ export default class ChatButton extends React.Component {
         return (
             <button id="chat-button" 
                     onClick={this.onClick.bind(this)} 
-                    style={{ display: this.props.data ? 'none' : '' }}>
+                    style={{
+                        display: this.props.data ? 'none' : ''
+                        }}>
                         <i class="fas fa-comment fa-2x"></i>
             </button>
         );

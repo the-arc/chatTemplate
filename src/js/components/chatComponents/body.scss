@@ -1,8 +1,9 @@
 @mixin comments() {
     display: table;
     margin-bottom:5px;
-    padding:3px 8px;
+    padding:5px 8px;
     box-shadow: 0 5px 5px 0 rgba(30, 30, 130, 0.3);
+    p{margin:0px 10px;}
 }
 
 #chatBody{

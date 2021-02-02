@@ -16,11 +16,13 @@ export default class Chat extends React.Component {
         let qa = [];
         for(let i in this.props.qna.question){
             qa.push(<div class="question">{this.props.qna.question[i]}</div>);
-            console.log(this.props.qna.answer[i]);
             qa.push(<div class="answer">
                 {this.props.qna.answer[i] == null ? 
                     (<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>) : 
-                    (<span>{this.props.qna.answer[i]}</span>)
+                    (<span dangerouslySetInnerHTML={{ __html: this.props.qna.answer[i] }} />)
+                    //(<span>{this.props.qna.answer[i]}</span>)
+                    //<div id="login_duration_description" dangerouslySetInnerHTML={{ __html: message }} />
+
                 } 
             </div>);
             this.scrollDown();
