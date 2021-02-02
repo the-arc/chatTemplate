@@ -23,11 +23,23 @@ function firstBotComment(){
 
 /*
  * こちらからチャットサーバとの連携APIを記述します
+ * 返却するテキストはresolve()内に出力してください。
  * param:  質問テキスト
  * return: bot返却用テキスト
  */
+function send(text){
+    return new Promise((resolve) => {
+        //resolve(text+"の回答です");
+    })
+}
+
 function submit(text){
-    return text+"の回答です";
+    return new Promise((resolve) => {
+        send(text)
+        .then((response)=> {
+            resolve(response);
+        })
+    })
 }
 
 
